@@ -24,7 +24,7 @@ const Footer:React.FC<{}> = ()=>(
                     </Link>
                     <Link href={'https://www.linkedin.com/in/hiten-vats/'}>
                         <Linkedin className="w-8 h-8 text-blue-900 p-1 hover:bg-blue-900 hover:text-yellow-50 rounded-lg duration-300 ease-in-out"/>
-                    </Link>
+                    </Link> 
                 </div>
             </div>
         </Container>
