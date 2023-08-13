@@ -34,7 +34,7 @@ const Heading: React.FC<HeadingPropsType> = ({
         underline: underline,
         italic: italic,
       },
-      'text-blue-900',
+      'text-blue-900 dark:text-yellow-50',
       className
     ),
   }

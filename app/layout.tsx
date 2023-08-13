@@ -16,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.png' sizes='any' />
-      </head>
-      <body className={'my-16 md:my-20 lg:my-40 bg-yellow-50'}>
+      <body className={'my-16 md:my-20 lg:my-40 bg-yellow-50 dark:bg-blue-900'}>
         {children}
         <Footer />
         <Analytics/>
