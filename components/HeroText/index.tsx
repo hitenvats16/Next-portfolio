@@ -19,7 +19,7 @@ const HeroText: React.FC<{}> = () => (
       </Typography.Heading>
     </div>
     <Typography.Content
-      className='text-blue-900 text-justify'
+      className='text-justify'
       boldness={600}
       fontFamily='manrope'>
       {heroText.description}
@@ -35,7 +35,7 @@ const HeroText: React.FC<{}> = () => (
 export default HeroText
 
 const Pill: React.FC<{ name: string }> = ({ name }) => (
-  <span className='block text-sm text-yellow-50 bg-blue-900 px-3 py-1.5 rounded'>
+  <span className='block text-sm text-yellow-50 bg-blue-900 dark:bg-yellow-50 dark:text-blue-950 px-3 py-1.5 rounded ease-in-out duration-300'>
     {name}
   </span>
 )

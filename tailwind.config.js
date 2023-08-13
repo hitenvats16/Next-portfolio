@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      transitionTimingFunction:{
+        spring: 'cubic-bezier(.25,.78,.24,.79)'
+      },
       maxWidth: {
         82: '1312px',
         container: '1000px'

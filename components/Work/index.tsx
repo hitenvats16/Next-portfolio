@@ -27,11 +27,15 @@ const Card: React.FC<(typeof ProjectObject)[0]> = ({
   link,
 }) => (
   <Link href={link}>
-    <div className='p-5 border-[4px] border-blue-900 rounded-xl hover:bg-blue-900 group duration-300 ease-in-out'>
-      <Typography.Heading variant='h6' className=' group-hover:text-yellow-50 duration-300 ease-in-out'>
+    <div className='p-5 border-[4px] border-blue-900 dark:border-yellow-50 rounded-xl hover:bg-blue-900 dark:hover:bg-yellow-50 group duration-300 ease-in-out'>
+      <Typography.Heading
+        variant='h6'
+        className=' group-hover:text-yellow-50 dark:group-hover:text-blue-900 duration-300 ease-in-out'>
         {label}
       </Typography.Heading>
-      <Typography.Content size='sm' className=' group-hover:text-yellow-50 duration-300 ease-in-out'>
+      <Typography.Content
+        size='sm'
+        className=' group-hover:text-yellow-50 dark:group-hover:text-blue-900 duration-300 ease-in-out'>
         {description}
       </Typography.Content>
     </div>

@@ -27,7 +27,7 @@ const Content: React.FC<ContentPropType> = ({
         Fonts[fontFamily],
         BoldnessToFontWeightMap[boldness],
         SizeToStyleMap[size],
-        'text-blue-900',
+        'text-blue-900 dark:text-yellow-50 ease-in-out duration-300',
         className
       )}>
       {children}

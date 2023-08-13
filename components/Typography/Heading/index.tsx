@@ -8,9 +8,10 @@ import { BoldnessToFontWeightMap } from '../constants'
 
 interface HeadingPropsType
   extends DetailedHTMLProps<
-    HTMLAttributes<HTMLHeadingElement>,
-    HTMLHeadingElement
-  >, FontPropTypes {
+      HTMLAttributes<HTMLHeadingElement>,
+      HTMLHeadingElement
+    >,
+    FontPropTypes {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
@@ -34,7 +35,7 @@ const Heading: React.FC<HeadingPropsType> = ({
         underline: underline,
         italic: italic,
       },
-      'text-blue-900 dark:text-yellow-50',
+      'text-blue-900 dark:text-yellow-50 ease-in-out duration-300',
       className
     ),
   }

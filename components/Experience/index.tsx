@@ -10,8 +10,8 @@ const ExperienceSection: React.FC<{}> = () => (
       boldness={600}
       variant='h5'
       className='mb-5'>{`He's currently`}</Typography.Heading>
-    <ol className='list-disc text-blue-900'>
-      {experienceObject.current.map(({ heading, link,linkLable }, index) => (
+    <ol className='list-disc text-blue-900 dark:text-yellow-50'>
+      {experienceObject.current.map(({ heading, link, linkLable }, index) => (
         <li key={index} className=' ml-8'>
           <Typography.Content>
             {link ? (
@@ -32,7 +32,7 @@ const ExperienceSection: React.FC<{}> = () => (
       boldness={600}
       variant='h5'
       className='mb-5 mt-10'>{`He was`}</Typography.Heading>
-    <ol className='list-disc text-blue-900'>
+    <ol className='list-disc text-blue-900 dark:text-yellow-50'>
       {experienceObject.past.map(({ heading, link, linkLable }, index) => (
         <li key={index} className=' ml-8'>
           <Typography.Content>
