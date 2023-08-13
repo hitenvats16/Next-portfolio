@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        82: '1312px'
+        82: '1312px',
+        container: '1000px'
       },
       fontSize:{
         '7xl': '72px',

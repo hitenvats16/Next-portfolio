@@ -12,7 +12,13 @@ const Container: React.FC<ContainerProps> = ({
     <ParentContainer
       skipParentContainer={skipParentContainer}
       className={parentClassName}>
-      <div className={cn(' w-full max-w-82 px-7 sm:px-10 md:px-16', className)}>{children}</div>
+      <div
+        className={cn(
+          ' w-full max-w-container px-7 sm:px-10 md:px-16',
+          className
+        )}>
+        {children}
+      </div>
     </ParentContainer>
   )
 }
