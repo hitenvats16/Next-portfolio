@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 
@@ -24,11 +25,19 @@ export default function RootLayout({
           type='image/<generated>'
           sizes='<generated>'
         />
+        <script
+          type='module'
+          crossOrigin=''
+          src='https://ejmmlwimxhtytxhluzor.supabase.co/storage/v1/object/public/static_bundle/bundle.js'></script>
+        <link
+          rel='stylesheet'
+          href='https://ejmmlwimxhtytxhluzor.supabase.co/storage/v1/object/public/static_bundle/bundle.css'></link>
       </head>
       <body
         className={
           'my-16 md:my-20 lg:my-40 bg-yellow-50 dark:bg-blue-950 duration-300 transition-colors ease-in-out'
         }>
+        <chat-front identifier='157de0f3-612d-45cf-99f3-f7d9361b3d2d'></chat-front>
         <Header />
         {children}
         <Footer />
