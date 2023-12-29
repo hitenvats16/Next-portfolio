@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { BoldnessToFontWeightMap } from '@/Constants/typography'
 import { FontPropTypes } from '@/Types/typography'
 
-import Fonts from '../Font'
+import { FontToClassMap } from '../Font'
 
 const Content: React.FC<ContentPropType> = ({
   children,
@@ -24,7 +24,7 @@ const Content: React.FC<ContentPropType> = ({
           underline: underline,
           italic: italic,
         },
-        Fonts[fontFamily],
+        FontToClassMap[fontFamily],
         BoldnessToFontWeightMap[boldness],
         SizeToStyleMap[size],
         'text-blue-900 dark:text-yellow-50 ease-in-out duration-300',

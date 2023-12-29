@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import { FontPropTypes } from '@/Types/typography'
 import { BoldnessToFontWeightMap } from '@/Constants/typography'
 
-import Fonts from '../Font'
+import { FontToClassMap } from '../Font'
 
 interface HeadingPropsType
   extends DetailedHTMLProps<
@@ -28,7 +28,7 @@ const Heading: React.FC<HeadingPropsType> = ({
   const props = {
     ...restProps,
     className: cn(
-      Fonts[fontFamily],
+      FontToClassMap[fontFamily],
       VariantToStyleMap[variant],
       BoldnessToFontWeightMap[boldness],
       {

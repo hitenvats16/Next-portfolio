@@ -16,6 +16,12 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontFamily:{
+      inter: 'var(--font-inter)',
+      manrope: 'var(--font-manrope)',
+      nunito: 'var(--font-nunito)',
+      poppins: 'var(--font-poppins)'
+    },
     extend: {
       maxWidth:{
         82: '1312px',

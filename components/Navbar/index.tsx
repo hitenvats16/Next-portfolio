@@ -1,8 +1,6 @@
 'use client'
 import { ExternalLink, Menu } from 'lucide-react'
-import {
-  usePathname,
-} from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
@@ -13,9 +11,11 @@ import Typography from '../Typography'
 
 export default function Navbar() {
   return (
-    <nav className='grid w-full p-10 place-items-center'>
+    <nav className='grid w-full p-10 place-items-center' id='navbar'>
       <div className='flex items-center justify-between w-full max-w-82'>
-        <Logo className='w-20 text-indigo-300' />
+        <Link href={'/'}>
+          <Logo className='w-20 text-indigo-300' />
+        </Link>
         <span className='block'>
           <Drawer />
         </span>
@@ -57,7 +57,8 @@ function Drawer() {
                     className={cn(
                       'block h-1 mt-2 bg-indigo-900 rounded-full ease-linear duration-snap w-0 group-hover:w-full',
                       {
-                        'w-full': pathname.split('/')[1] === linkSegment && !external,
+                        'w-full':
+                          pathname.split('/')[1] === linkSegment && !external,
                       }
                     )}
                   />
