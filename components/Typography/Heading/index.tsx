@@ -1,10 +1,10 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react'
 
 import { cn } from '@/lib/utils'
+import { FontPropTypes } from '@/Types/typography'
+import { BoldnessToFontWeightMap } from '@/Constants/typography'
 
 import Fonts from '../Font'
-import { FontPropTypes } from '../Types'
-import { BoldnessToFontWeightMap } from '../constants'
 
 interface HeadingPropsType
   extends DetailedHTMLProps<

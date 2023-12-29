@@ -6,7 +6,8 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -16,18 +17,14 @@ module.exports = {
       },
     },
     extend: {
-      transitionTimingFunction:{
-        spring: 'cubic-bezier(.25,.78,.24,.79)'
-      },
-      maxWidth: {
+      maxWidth:{
         82: '1312px',
-        container: '1000px'
       },
-      fontSize:{
-        '7xl': '72px',
-        '8xl': '90px' 
+      transitionDuration: {
+        snap: '200ms',
       },
       colors: {
+        white: '#fafafa',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -69,12 +66,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {

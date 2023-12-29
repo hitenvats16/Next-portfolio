@@ -1,13 +1,7 @@
-import ExperienceSection from '@/components/Experience'
-import HeroText from '@/components/HeroText'
-import WorkSection from '@/components/Work'
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
   return (
-    <>
-      <HeroText />
-      <ExperienceSection/>
-      <WorkSection/>
-    </>
+    <></>
   )
 }
