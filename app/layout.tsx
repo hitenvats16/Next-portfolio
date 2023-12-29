@@ -41,6 +41,25 @@ export const metadata: Metadata = {
     'DevOps',
     'Cloud computing',
   ],
+  openGraph: {
+    type: 'website',
+    url: 'http://hitenvats.one',
+    title: 'Hiten Vats',
+    description: `
+    A software engineer at Zella AI, Hiten is driven by a deep passion 
+    for coding, skillfully transforming it into impactful solutions. No challenge 
+    is insurmountable, every hurdle an opportunity to innovate and build the 
+    extraordinary. Whether wielding Python and Django or harnessing the power 
+    of Node.js and React, [name]'s diverse toolkit is matched only by a boundless 
+    imagination. Witness the magic as lines of code are woven into elegant, functional 
+    realities, a testament to the beauty and power of Hiten's software craftsmanship.`,
+    siteName: 'Hiten Vats',
+    images: [
+      {
+        url: 'https://hitenvats.one/og.png',
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
