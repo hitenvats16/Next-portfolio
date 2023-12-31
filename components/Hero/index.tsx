@@ -1,15 +1,14 @@
 'use client'
-
-import { intersectionObserver } from '@/utils/observer'
 import { useEffect, useRef } from 'react'
-import { StarFilledIcon } from '@radix-ui/react-icons'
-import { SquareAsterisk } from 'lucide-react'
 import gsap from 'gsap'
+
+import { intersectionObserverInit } from '@/utils/observer'
 
 export default function HeroSection() {
   const ref = useRef(null)
 
   useEffect(() => {
+    const intersectionObserver = intersectionObserverInit()
     if (ref.current) {
       intersectionObserver.observe(ref.current)
       const cb = AnimationInit()
@@ -20,25 +19,29 @@ export default function HeroSection() {
   return (
     <main
       ref={ref}
-      className='h-[calc(100vh_-_336px)] grid place-items-center p-10'
-      nav-theme='teal'>
+      className='lg:h-[calc(100vh_-_336px)] h-[calc(100vh_-_136px)] grid place-items-center p-10'
+      nav-theme='white'>
       <div className='flex flex-col items-center justify-center w-full h-full gap-10 lg:items-start lg:justify-start max-w-82'>
         <div className='flex-col items-start justify-center '>
-          <h1 className='text-teal-300 text-6xl mb-6 lg:text-[6rem] font-poppins font-semibold'>
+          <h1 className='text-white text-6xl mb-6 lg:text-[6rem] font-poppins font-semibold'>
             Hiten Vats
           </h1>
-          <p className='font-semibold text-teal-300 font-nunito text-3xl lg:text-[2rem] lg:text-justify lg:max-w-[900px]'>
+          <p className='font-semibold text-white font-nunito text-3xl lg:text-[1.5rem] lg:text-justify lg:max-w-[900px]'>
             Under the hushed cloak of night, where moonlight inspires and
             caffeine invigorates, a digital artisan breathes life into code,
             defying the ordinary. Step into their world, a wonderland spun from
             pixels and innovation.
           </p>
         </div>
-        <div className='flex-col flex-1 hidden w-full h-full gap-5 lg:flex'>
+        <div
+          className='flex flex-col flex-1 w-full h-full gap-5'
+          id='blocksContainer'>
           <div className='flex flex-1 gap-5'>
-            <div id='block1' className='h-full overflow-hidden rounded-3xl'>
+            <div
+              id='block1'
+              className='relative w-40 h-full overflow-hidden rounded-3xl'>
               <div
-                className={`bg-[url('/vibrant-2.avif')] blur-md w-full h-full bg-cover bg-no-repeat`}
+                className={`bg-[url('/vibrant-2.avif')] blur-md z-10 w-full h-full bg-cover bg-no-repeat absolute top-0 left-0`}
               />
             </div>
             <div
@@ -66,19 +69,18 @@ export default function HeroSection() {
 }
 
 function AnimationInit() {
-  const tl = gsap.timeline({
+  const blocks = gsap.timeline({
     repeat: -1,
     yoyo: true,
   })
-
-  tl.to('#block1', {
+  blocks.to('#block1', {
     width: '80%',
     duration: 2,
     ease: 'elastic.inOut(1,0.3)',
   })
     .to('#block2', {
       width: 300,
-      height: 300,
+      height: 200,
       duration: 2,
       ease: 'elastic.inOut(1,0.3)',
     })
@@ -88,13 +90,13 @@ function AnimationInit() {
       ease: 'elastic.inOut(1,0.3)',
     })
     .to('#block2', {
-      width: '100%',
-      height: '170',
+      width: '90%',
+      height: '150',
       duration: 2,
       ease: 'elastic.inOut(1,0.3)',
     })
 
   return () => {
-    tl.clear()
+    blocks.clear()
   }
 }

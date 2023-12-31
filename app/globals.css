@@ -35,9 +35,9 @@
     --radius: 0.5rem;
 
     /* Custom Colors for Navigation bar */
-    --text-color: rgb(165 180 252);
-    --background-color: rgb(165 180 252);
-    --selected-color: rgb(49 46 129);
+    --text-color: #FAFAFA;
+    --background-color: #FAFAFA;
+    --selected-color: rgb(41 37 36);
   }
 
   .dark {

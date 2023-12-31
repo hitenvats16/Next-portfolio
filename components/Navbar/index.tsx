@@ -35,7 +35,9 @@ function Drawer() {
   }
   return (
     <Sheet>
-      <SheetTrigger ref={ref} className='p-2 ease-in-out group hover:bg-nav-background hover:rounded-full duration-snap'>
+      <SheetTrigger
+        ref={ref}
+        className='p-2 ease-in-out group hover:bg-nav-background hover:rounded-full duration-snap'>
         <Menu className='w-10 h-10 ease-in-out text-nav-text group-hover:text-nav-selected duration-snap' />
       </SheetTrigger>
       <SheetContent
@@ -107,7 +109,7 @@ const LINKS = [
   },
 ]
 
-export function setNavTheme(theme: 'teal' | 'indigo'): void {
+export function setNavTheme(theme: keyof typeof colorToThemeMap): void {
   const r: any = document.querySelector(':root')
 
   const colors = colorToThemeMap[theme]
@@ -136,5 +138,10 @@ const colorToThemeMap = {
     text: 'rgb(165 180 252)',
     background: 'rgb(165 180 252)',
     selected: 'rgb(49 46 129)',
+  },
+  white: {
+    text: '#FAFAFA',
+    background: '#FAFAFA',
+    selected: 'rgb(41 37 36)',
   },
 }
