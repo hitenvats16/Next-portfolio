@@ -1,7 +1,7 @@
 import React, { DetailedHTMLProps, HTMLAttributes } from 'react'
 
 import { cn } from '@/lib/utils'
-import { FontPropTypes } from '@/Types/typography'
+import { FontPropTypes } from '@/types/typography'
 import { BoldnessToFontWeightMap } from '@/Constants/typography'
 
 import { FontToClassMap } from '../Font'

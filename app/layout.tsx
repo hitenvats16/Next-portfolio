@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 
 import Navbar from '@/components/Navbar'
 import Fonts from '@/components/Typography/Font'
+import { cn } from '@/lib/utils'
+import Footer from '@/components/Footer'
 
 import './globals.css'
-import { cn } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Hiten Vats',
@@ -79,6 +80,7 @@ export default function RootLayout({
       <body className={' bg-stone-900'}>
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   )

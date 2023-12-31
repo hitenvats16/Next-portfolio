@@ -1,6 +1,29 @@
-import { cn } from "@/lib/utils";
+import { cn } from '@/lib/utils'
 
-export default function Logo({ className }: { className: string }) {
+export default function Logo({
+  className,
+  solid,
+}: {
+  className: string
+  solid?: boolean
+}) {
+  if (solid) {
+    return (
+      <svg
+        viewBox='0 0 79 39'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        className={cn(className)}>
+        <path
+          fillRule='evenodd'
+          clipRule='evenodd'
+          d='M22.461 2.46105C20.2155 0.215537 16.5748 0.215538 14.3293 2.46105L4.60659 12.1838C-1.25127 18.0416 -1.25127 27.5391 4.60659 33.397C10.4645 39.2548 19.9619 39.2548 25.8198 33.397L39.6084 19.6084L56.7557 36.7557C59.0012 39.0012 62.6419 39.0012 64.8875 36.7557L74.6102 27.033C80.468 21.1751 80.468 11.6776 74.6102 5.81978C68.7523 -0.0380814 59.2548 -0.038081 53.397 5.81978L39.6084 19.6084L22.461 2.46105Z'
+          fill='currentColor'
+          className='ease-in-out'
+        />
+      </svg>
+    )
+  }
   return (
     <svg
       viewBox='0 0 79 39'
@@ -15,8 +38,8 @@ export default function Logo({ className }: { className: string }) {
         className='ease-in-out opacity-100 duration-snap group-hover:opacity-0'
       />
       <path
-        fill-rule='evenodd'
-        clip-rule='evenodd'
+        fillRule='evenodd'
+        clipRule='evenodd'
         d='M22.461 2.46105C20.2155 0.215537 16.5748 0.215538 14.3293 2.46105L4.60659 12.1838C-1.25127 18.0416 -1.25127 27.5391 4.60659 33.397C10.4645 39.2548 19.9619 39.2548 25.8198 33.397L39.6084 19.6084L56.7557 36.7557C59.0012 39.0012 62.6419 39.0012 64.8875 36.7557L74.6102 27.033C80.468 21.1751 80.468 11.6776 74.6102 5.81978C68.7523 -0.0380814 59.2548 -0.038081 53.397 5.81978L39.6084 19.6084L22.461 2.46105Z'
         fill='currentColor'
         className='ease-in-out opacity-0 duration-snap group-hover:opacity-100'
