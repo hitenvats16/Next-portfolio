@@ -23,10 +23,7 @@ export default function HeroSection() {
       nav-theme='white'>
       <div className='flex flex-col items-center justify-center w-full h-full gap-10 lg:items-start lg:justify-start max-w-82'>
         <div className='flex-col items-start justify-center '>
-          <h1 className='text-white text-6xl mb-6 lg:text-[6rem] font-poppins font-semibold'>
-            Hiten Vats
-          </h1>
-          <p className='font-semibold text-white font-nunito text-3xl lg:text-[1.5rem] lg:text-justify lg:max-w-[900px]'>
+          <p className='font-semibold text-white font-nunito text-3xl lg:text-[2rem] lg:text-justify lg:max-w-[900px]'>
             Under the hushed cloak of night, where moonlight inspires and
             caffeine invigorates, a digital artisan breathes life into code,
             defying the ordinary. Step into their world, a wonderland spun from
@@ -34,7 +31,7 @@ export default function HeroSection() {
           </p>
         </div>
         <div
-          className='flex flex-col flex-1 w-full h-full gap-5'
+          className='flex flex-col flex-1 w-full h-full gap-5 max-h-[275px] lg:max-h-full'
           id='blocksContainer'>
           <div className='flex flex-1 gap-5'>
             <div
