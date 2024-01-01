@@ -22,7 +22,7 @@ export default function HeroSection() {
       className='lg:h-[calc(100vh_-_336px)] h-[calc(100vh_-_136px)] grid place-items-center p-10'
       nav-theme='white'>
       <div className='flex flex-col items-center justify-center w-full h-full gap-10 lg:items-start lg:justify-start max-w-82'>
-        <div className='flex-col items-start justify-center '>
+        <div id='intro' className='flex-col items-start justify-center '>
           <p className='font-semibold text-white font-nunito text-3xl lg:text-[2rem] lg:text-justify lg:max-w-[900px]'>
             Under the hushed cloak of night, where moonlight inspires and
             caffeine invigorates, a digital artisan breathes life into code,
@@ -66,15 +66,16 @@ export default function HeroSection() {
 }
 
 function AnimationInit() {
-  const blocks = gsap.timeline({
-    repeat: -1,
-    yoyo: true,
-  })
-  blocks.to('#block1', {
-    width: '80%',
-    duration: 2,
-    ease: 'elastic.inOut(1,0.3)',
-  })
+  const blocks = gsap
+    .timeline({
+      repeat: -1,
+      yoyo: true,
+    })
+    .to('#block1', {
+      width: '80%',
+      duration: 2,
+      ease: 'elastic.inOut(1,0.3)',
+    })
     .to('#block2', {
       width: 300,
       height: 200,
@@ -92,8 +93,49 @@ function AnimationInit() {
       duration: 2,
       ease: 'elastic.inOut(1,0.3)',
     })
+  const mainTimeline = gsap
+    .timeline()
+    .fromTo(
+      '#navbar',
+      {
+        x: '-100%',
+        opacity: 0,
+      },
+      {
+        x: '0%',
+        duration: 1,
+        ease: 'power3.in',
+        opacity: 100,
+      }
+    )
+    .fromTo(
+      '#blocksContainer',
+      {
+        x: '100%',
+        opacity: 0,
+      },
+      {
+        x: '0%',
+        duration: 1,
+        opacity: 100,
+        ease: 'power3.in',
+      },
+      '<'
+    )
+    .fromTo(
+      '#intro',
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 100,
+        ease: 'power3.in',
+        duration: 1,
+      }
+    )
+    .add(blocks)
 
   return () => {
-    blocks.clear()
+    mainTimeline.clear()
   }
 }
