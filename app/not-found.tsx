@@ -29,7 +29,6 @@ export default function NotFound() {
           </div>
           <Typography.Heading
             variant='h5'
-            boldness={900}
             className='text-teal-400'
             fontFamily='inter'>{`This page doesn't exist`}</Typography.Heading>
           <Typography.Content
