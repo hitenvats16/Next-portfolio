@@ -2,13 +2,12 @@
 import { ExternalLink, Menu } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import { useRef } from 'react'
 
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 
 import Logo from '../Icons/Logo'
-import Typography from '../Typography'
-import { useRef } from 'react'
 
 export default function Navbar() {
   return (
@@ -29,7 +28,7 @@ function Drawer() {
   const pathname = usePathname()
   const ref = useRef<HTMLButtonElement>(null)
   const closeSheet = () => {
-    if(ref.current){
+    if (ref.current) {
       ref.current.click()
     }
   }
@@ -53,13 +52,9 @@ function Drawer() {
                   onClick={closeSheet}
                   className='block w-full text-nav-selected group'>
                   <div className='flex items-center justify-between'>
-                    <Typography.Heading
-                      variant='h6'
-                      fontFamily='manrope'
-                      boldness={800}
-                      className='text-nav-selected'>
+                    <h6 className='font-extrabold text-nav-selected font-manrope'>
                       {label}
-                    </Typography.Heading>
+                    </h6>
                     {external && (
                       <ExternalLink className='w-6 h-6 text-nav-selected' />
                     )}
@@ -78,9 +73,9 @@ function Drawer() {
             )}
           </div>
           <div className='p-10 border-2 border-nav-selected lg:col-span-2 rounded-xl'>
-            <Typography.Content className='text-nav-selected'>
+            <p className='text-nav-selected'>
               Blog Posts will go here
-            </Typography.Content>
+            </p>
           </div>
         </div>
       </SheetContent>
